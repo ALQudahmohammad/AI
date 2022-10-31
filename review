@@ -4,3 +4,86 @@ y = 3.5
 z = 'abc'
 print(x,y,z)
 print(type(x),type(y),type(z))
+
+comments
+# this is a comment (one line)
+
+'''
+this is 
+multiline 
+comment
+'''
+print('hello')
+
+
+Lists in Python
+
+numbers = [1, 2, 3]
+things = [1, 4.6, 'abc']
+numbers[1]
+
+
+Tuple (immutable list)
+point = (2, 3)
+point[0]
+
+
+Dictionary
+bag = {'pen': 3, 'tissues': 10, 'candy': 3, 'book': 1}
+bag['book']
+
+
+loops and decisions
+range(5)
+list(range(5))
+------------
+range(5)
+list(range(5))
+for i in range(5):
+  print(i)
+  ---------------------
+  import random 
+#Generate 10 random numbers between -100 and 100
+random_list = random.sample(range(-100, 100), 10)
+print(random_list)
+
+Decision
+for number in random_list:
+  if number > 0:
+    print(number)
+    -----------------------------
+Classes and objects
+Rectangle class
+class Rectangle:
+  def __init__(self, length, width):
+      self.length = length
+      self.width = width
+
+  def area(self):
+      return self.length * self.width
+
+  def perimeter(self):
+      return 2 * (self.length + self.width) 
+
+  def __str__(self):
+    return 'length: {} \t width:{}'.format(self.length, self.width)
+   ------------------- 
+    r1 = Rectangle(length=4, width=4) # rectangle
+print(r1)
+print(r1.area())
+print(r1.perimeter())
+
+
+
+inheritance
+
+Square class
+#  Here we declare that the Square class inherits from the Rectangle class
+class Square(Rectangle):
+    def __init__(self, x):
+        super().__init__(x, x)
+        
+s2 = Square(3)
+print(s2)
+print(s2.area())
+print(s2.perimeter())
